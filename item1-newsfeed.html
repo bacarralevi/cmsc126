@@ -1,54 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Newsfeed</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <header>
-            <h1>Latest News</h1>
-        </header>
 
-        <main class="news-container">
-            <section class="newsfeed">
-                <article class="news-card">
-                    <img src="news1.jpg" alt="News headline image" />
-                    <div class="news-content">
-                        <h2>Breaking: Major Event Unfolds</h2>
-                        <p class="date">March 14, 2025</p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nulla facilisi.
-                        </p>
-                        <a href="#">Read more</a>
-                    </div>
-                </article>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f6;
+        }
 
-                <article class="news-card">
-                    <img src="news2.jpg" alt="News headline image" />
-                    <div class="news-content">
-                        <h2>Technology Advances in 2025</h2>
-                        <p class="date">March 13, 2025</p>
-                        <p>
-                            New breakthroughs are revolutionizing industries
-                            worldwide.
-                        </p>
-                        <a href="#">Read more</a>
-                    </div>
-                </article>
-            </section>
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: #dae0e6;
+            padding: 10px 15px;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 1px solid #aebac1;
+            position: relative;
+        }
 
-            <aside class="sidebar">
-                <h2>Trending Topics</h2>
-                <ul>
-                    <li><a href="#">Global Politics</a></li>
-                    <li><a href="#">AI Developments</a></li>
-                    <li><a href="#">Sports Highlights</a></li>
-                    <li><a href="#">Market Trends</a></li>
-                </ul>
-            </aside>
-        </main>
-    </body>
+        .user-info {
+            background-color: #ffffff;
+            padding: 5px 10px;
+            border: 1px solid #aebac1;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            font-size: 14px;
+            color: #333;
+            position: absolute;
+            right: 10px;
+            bottom: 0px;
+        }
+
+        .user-info a {
+            color: #0079d3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .user-info a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px;
+            border-bottom: 1px solid #aebac1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 10px;
+            bottom: 0px;
+            background-color: #ffffff;
+            padding: 5px 10px;
+        }
+
+        .nav-left a {
+            margin: 0 5px;
+            padding: 5px 10px;
+            position: absolute;
+            left: 10px;
+            bottom: 0px;
+            text-decoration: none;
+            color: #0079d3;
+            font-size: 16px;
+            border: 1px solid #aebac1;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .nav-left a:hover {
+            background-color: #f0f0f0;
+            color: #ff4500;
+        }
+
+        .search-bar {
+            padding: 5px;
+            border: 1px solid #aebac1;
+            border-radius: 5px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 15px;
+        }
+
+        .nav-right div {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: 1px solid #aebac1;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title-bar">
+        <div>reddit</div>
+        <div class="user-info">
+            <a href="#">7hundredand77</a>, you're back! <a href="#">preferences</a> | <a href="#">logout?</a> :(
+        </div>
+    </div>
+    <div class="nav-bar">
+        <div class="nav-left">
+            <a href="#" style="color: #ff4500; font-weight: bold;">What's Hot</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Top</a>
+            <a href="#">Saved</a>
+        </div>
+        <div class="nav-right">
+            <input type="text" class="search-bar" placeholder="Search">
+            <div>📩 1 New Msg</div>
+            <div>🔗 53,211 Links</div>
+            <div>💬 4,887 Comments</div>
+        </div>
+    </div>
+</body>
+
 </html>
